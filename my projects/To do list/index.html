@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head">
+        <h1>Todo list</h1>
+        <p id="error">You can't creat an empty task</p>    
+        <div class="taskInp">
+                <input id="taskInput" placeholder="Enter a task" type="text" autocomplete="off">
+                <button type="submit" onclick="setTask()">Add</button>
+        </div>
+        <div class="deleteBtns">
+            <button type="button" onclick="deleteAll()" class="deleteTasks">Delete all tasks</button>
+            <button type="button" onclick="deleteEnded()" class="deleteTasks">Delete completed tasks</button>
+        </div>
+    </div>
+    <hr>
+    <ul class="tasks"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

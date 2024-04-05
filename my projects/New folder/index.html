@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product management system</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>CRUDS</h2>
+            <button href="solution.html">PRODUCT MANAGEMENT SYSTEM</button>
+        </div>
+
+        <div class="inputs">
+            <fieldset class="firstRow">
+                <legend>date:</legend>
+                <input placeholder="date" type="date" id="date" >
+            </fieldset>
+
+            <fieldset  class="firstRow">
+                <legend>time:</legend>
+                <input placeholder="time" type="time" id="time">
+            </fieldset>
+            <fieldset class="secondRow">
+                <legend>before</legend>
+                <select placeholder="before" id="before">
+                    <option value="youtube">youtube</option>
+                    <option value="social media">social media</option>
+                    <option value="call friends">call friends</option>
+                    <option value="with family">with family</option>
+                    <option value="with friends">with friends</option>
+                    <option value="learn programing">learn programing</option>
+                    <option value="watch TV">watch TV</option>
+                    <option value="eat">eat</option>
+                    <option value="in bathroom">in bathroom</option>
+                    <option value="taking shower">taking shower</option>
+                    <option value="Quran">Quran</option>
+                    <option value="In the street">In the street</option>
+                    <option value="sleep">sleep</option>
+            </select>
+        </fieldset>
+            
+            <fieldset class="secondRow">
+                <legend>tool</legend>
+                <select placeholder="tool" id="tool">
+                    <option value="Labtop">Labtop</option>
+                    <option value="Mobile">Mobile</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="secondRow">
+                <legend>where</legend>
+                <select placeholder="where" id="where">
+                    <option value="bed">bed</option>
+                    <option value="bathroom">bathroom</option>
+                    <option value="balaconiroom">balaconiroom</option>
+                </select>
+            </fieldset>
+
+            <div class="inpDivs">
+                <label for="alone">alone:</label>
+                <input placeholder="alone" type="checkbox" id="alone" class="thirdRow">
+            </div>
+            <div class="inpDivs">
+                <label for="bussyness">bussyness:</label>
+                <input placeholder="bussyness" type="checkbox" id="bussyness" class="thirdRow">
+            </div>
+            <fieldset id="worships" class="inpDivs">
+                <legend>worships:</legend>
+                <div>
+                    <label class="low" for="low">low:</label>
+                    <input type="radio" id="low" class="thirdRow" value="low" name="worship-value">
+                </div>
+                <div>
+                    <label class="normal" for="normal">normal:</label>
+                    <input type="radio" id="normal" class="thirdRow" value="normal" name="worship-value" checked>
+                </div>
+                <div>
+                    <label class="high" for="high">high:</label>
+                    <input type="radio" id="high" class="thirdRow" value="high" name="worship-value">
+                </div>
+            </fieldset>
+            <div class="bigger">
+                <label for="duration">duration:</label>
+                <input placeholder="duration" type="range" id="duration" class="slider" min="1" max="1440">
+                <strong id="durationh"></strong>
+            </div>
+            <button id="submit"><strong>Submit</strong></button>
+        </div>
+        <div class="outputs">
+            <table>
+                <thead>
+                <tr>
+                    <th>date</th>
+                    <th>time</th>
+                    <th>before</th>
+                    <th>duration</th>
+                    <th>alone</th>
+                    <th>tool</th>
+                    <th>where</th>
+                    <th>bussyness</th>
+                    <th>worships</th>
+                </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <button id="returnBtn"><i class="fas fa-home"></i></button>
+    <div class="container">
+        <div id="mostTime" class="anaCard">
+            <h2>Time rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="rate">
+                    <h4>rate:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="mostBefore" class="anaCard">
+            <h2>Before rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="least">
+                    <h4>least:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="mostPlace" class="anaCard">
+            <h2>Place rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="least">
+                    <h4>least:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="worshipsValue" class="anaCard">
+            <h2>Worships rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="least">
+                    <h4>least:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="rate">
+                    <h4>rate:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="lonRate" class="anaCard">
+            <h2>Alone rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="least">
+                    <h4>least:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="rate">
+                    <h4>rate:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="bussyRate" class="anaCard">
+            <h2>Bussy rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="least">
+                    <h4>least:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="rate">
+                    <h4>rate:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="mostTool" class="anaCard">
+            <h2>Tool rate</h2>
+            <div class="content">
+                <div class="most">
+                    <h4>most:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+                <div class="least">
+                    <h4>least:</h4>
+                    <h3>from 2am to 3am</h3>
+                </div>
+            </div>
+        </div>
+        <div id="mostDuration" class="anaCard">
+            <h2>Duration rate</h2>
+            <div class="content">
+                12 minutes
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
