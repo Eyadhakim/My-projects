@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">Unsupported tags in html5:</h1>
+    <ul style="font-size: 20px;">
+        <li>&lt;acronym&gt; (use <a href="#abbr">&lt;abbr&gt;</a> insted)</li>
+        <li>&lt;big&gt; (use css insted)</li>
+        <li>&lt;center&gt; (use css insted)</li>
+        <li>&lt;font&gt; (use css insted)</li>
+        <li>&lt;strike&gt; (use <a href="#del">&lt;del&gt;</a> or <a href="#s">&lt;s&gt;</a> insted)</li>
+        <li>&lt;tt&gt; (use css insted)</li>
+        <li>&lt;frame&gt; (use <a href="iframe">&lt;iframe&gt;</a> insted)</li>
+        <li>&lt;frameset&gt; (use <a href="iframe">&lt;iframe&gt;</a> insted)</li>
+        <li>&lt;noframe&gt; (use javascript insted)</li>
+        <li>&lt;dir&gt; (use &lt;ul&gt; or &lt;menu&gt; insted)</li>
+    </ul>
+
+    <hr><h1>&lt;a&gt; tag</h1>
+    <a href="http://google.com">A link that will take the user to google</a><br><br>
+    <a href="mailto: workliftstudios@gmail.com">A link that will let the user send mail to the specified email</a><br><br>
+    <a href="tel: +201068066063">A link that will let the user call the specified phone number</a><br><br>
+    <a href="#section_id">A link that will take the user to a specified section in the same page</a><br><br>
+    <a href="javascript: alert('this is a javascript code')">A link that will run a javascript code</a><br><br>
+    <a href="/index.html" download="file">A link that will download file</a><br><br>
+
+    <hr><h1 id="abbr">&lt;abbr&gt; tag</h1>
+    <p>the acronym tag is no longer used in html5 and now we use the <abbr title="abbreviation">abbr</abbr> tag insted</p>
+    <p><abbr title="Hypertext markup language">HTML</abbr>, <abbr title="Cascading style sheets">CSS</abbr>, <abbr title="Javascript">JS</abbr> are languages for making web applications</p><br>
+    
+    <hr><h1>&lt;address&gt; tag</h1>
+    <address>
+        Written by <a href="mailto:eyadabdelhakim12213462882008@gmail.com">Eyad abdelhakim</a>.<br>
+        Visit us at: <br>
+        <a href="#">worklift.com</a><br>
+        57 madinet elsharq, Talbeya, Haram<br>
+        Egypt
+    </address><br>
+    
+    <hr><h1 id="b">&lt;b&gt; tag</h1>
+    <b>this is a bold text</b>
+    
+    <hr><h1>&lt;bdi&gt; tag (unsupported by safari)</h1>
+    <h2>text without bdi: User إياد: 90 points</h2>
+    <h2>text with bdi: User <bdi>إياد</bdi>: 90 points</h2>
+    
+    <hr><h1>&lt;bdo&gt; tag</h1>
+    <h2>dir="rtl": <bdo dir="rtl">User إياد: 90 points</bdo></h2>
+    <h2>dir="ltr": <bdo dir="ltr">User إياد: 90 points</bdo></h2>
+    <h2>Making the function of bdi using bdo is better because bdo supports most of browsers: <br> User <bdo dir="rtl">إياد</bdo>: 90 points</h2>
+    
+    <hr><h1>&lt;blockquote&gt; tag</h1>
+    <blockquote cite="https://www.w3schools.com/tags/tag_blockquote.asp">The &lt;blockquote&gt; tag specifies a section that is quoted from another source.</blockquote>
+    <blockquote cite="https://www.w3schools.com/tags/tag_blockquote.asp">Use &lt;q&gt; for inline short quotation</blockquote>
+
+    <hr><h1 id="cite">&lt;cite&gt; tag</h1>
+    <p><cite style="color: brown;">The Scream</cite> by Edward Munch. Painted in 1893.</p>
+    <p><cite>the cite tag</cite> defines a title of creative work: (book, song, painting, movie, etc..)</p>
+
+    <hr><h1 id="code">&lt;code&gt; tag</h1>
+    <h2>the <code style="color: darkred; background-color: #ddd;">&lt;code&gt;</code> tag defines a piece of computer code</h2>
+
+    <hr><h1 id="del">&lt;del&gt; tag</h1>
+    <del>this is a deleted text</del>
+    
+    <hr><h1 id="dfn">&lt;dfn&gt; tag</h1>
+    <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+    <p>this is <dfn><abbr title="abbreviation">abbr</abbr></dfn> inside <dfn><abbr title="definition element">dfn</abbr></dfn></p>
+
+    <hr><h1 id="em">&lt;em&gt; tag</h1>
+    <p>the <em>emphasized</em> text is displayed in italic</p>
+    
+    <hr><h1>&lt;i&gt; tag</h1>
+    <i>The &lt;i&gt; tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</i>
+    <p>Use the &lt;i&gt; element only when there is not a more appropriate semantic element, such as:</p>
+        <ul>
+            <li><a href="#em">&lt;em&gt;</a> (emphasized text)</li>
+            <li><a href="#strong">&lt;strong&gt;</a> (important text)</li>
+            <li><a href="#mark">&lt;mark&gt;</a> (marked/highlighted text)</li>
+            <li><a href="#cite">&lt;cite&gt;</a> (the title of a work)</li>
+            <li><a href="#dfn">&lt;dfn&gt;</a> (a definition term)</li>
+        </ul>
+
+    <hr><h1>&lt;ins&gt; tag</h1>
+    <p>i like <del>blue</del> <ins>green</ins></p>
+    <p>it accept two params: cite and datetime</p>
+
+    <hr><h1>&lt;kbd&gt; tag</h1>
+    <p>press <kbd>CTRL</kbd> + <kbd>C</kbd> to copy the text</p>
+    
+    <hr><h1 id="mark">&lt;mark&gt; tag</h1>
+    <mark>This is a marked text</mark>
+
+    <hr><h1>&lt;meter&gt; tag (unsupported in very old versions of browsers)</h1>
+    <p>tag attributes:</p>
+    <ul>
+        <li>high: 40</li>
+        <li>low: 10</li>
+        <li>max: 50</li>
+        <li>min: 0 (default value)</li>
+        <li>optimum: 20</li>
+        <li>value 30</li>
+    </ul>
+    <meter value="30" high="40" low="10" max="50" optimum="20">fffff</meter>
+
+    <hr><h1>&lt;pre&gt; tag</h1>
+    <pre>
+        Text in a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks
+    </pre>
+    
+    <hr><h1>&lt;progress&gt; tag (unsupported in very old versions of browsers)</h1>
+    <p>same as &lt;meter&gt; but defines a progress bar</p>
+    <p>it accepts two params: max and value</p>
+    <progress max="50" value="10"></progress>
+    
+    <hr><h1>&lt;q&gt; tag</h1>
+    <q>this is a short quotation</q>
+    
+    <hr><h1>&lt;ruby&gt;, &lt;rt&gt; and &lt;rp&gt; tags (unsupported in very old versions of browsers)</h1>
+    <ruby>
+        this tag is most used with the eastern languages<rp>(</rp><rt>This is an rt tag</rt><rp>)</rp>
+    </ruby>
+    <h2>If your browser doesen't support &lt;rt&gt;, the &lt;rp&gt; tag will work and the text will appear like this:</h2>
+    <ruby>
+        this tag is most used with the eastern languages (This is an rt tag)
+    </ruby>
+    <pre>
+        <em>
+            note: there is a &lt;rb&gt; tag but it is deprecated
+            the &lt;rb&gt; tag was used to wrap the standard text in &lt;ruby&gt; tag 
+            but now we write it as a textnode
+        </em>
+    </pre>
+
+    <hr><h1 id="s">&lt;s&gt; tag</h1>
+    <s>this is an incorrect, inaccurate, irrelevant text</s>
+    <em>note: it is not a deleted text</em>
+
+    <hr><h1>&lt;samp&gt; tag</h1>
+    <samp>this is a sample output from the computer</samp>
+    <p>we can use the <a href="#code">&lt;code&gt;</a> as an input and the &lt;samp&gt; as an output</p>
+
+    <hr><h1>&lt;small&gt; tag</h1>
+    <small>this is a small text for copyrights and other side-comments</small>
+
+    <hr><h1>&lt;strong&gt; tag</h1>
+    <strong>this is an important text</strong>
+    <p>tip: use <a href="#b">&lt;b&gt;</a> tag specify a bold text without any extra importance</p>
+
+    <hr><h1>&lt;sub&gt;, &lt;sup&gt; tags</h1>
+    <p>this text contains a <sub>subscript</sub> text and a <sup>superscript</sup> text</p>
+
+    <hr><h1>&lt;template&gt; tag (unsupported in very old versions of browsers)</h1>
+    <button>SHOW TAG</button> 
+    <template id="template">
+        <p>This tag defines a hidden elements inside it that we can show it later by javascript</p>
+    </template>
+    <p id="demo"></p>
+    
+    <hr><h1>&lt;time&gt; tag (unsupported in old versions of browsers)</h1>
+    <time datetime="2024-08-08 4:00">this is my Birthday</time>
+    <strong>The datetime attribute of this element is used translate the time into a machine-readable format so that browsers can offer to add date reminders through the user's calendar, and search engines can produce smarter search results.</strong>
+
+    <hr><h1>&lt;u&gt; tag</h1>
+    <u>this is un underlined text, it is used to wrap the uncorrect words</u>
+    
+    <hr><h1>&lt;var&gt; tag</h1>
+    <var>this is a variable</var>
+    
+    <hr><h1>&lt;wbr&gt;, &lt;br&gt; tags</h1>
+    We use &lt;br&gt; to make a new line <br> <br>
+    and we use &lt;wbr&gt; to make a new line for the same text
+    
+    <hr><h1>forms and inputs tags</h1>
+    <div style="width: 30vw;">
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <h2>____________<sub>&lt;form&gt;</sub>____________</h2>
+            <input type="button" value="this is a button input"><br><br>
+            <label for="nc">this is a checkbox</label>
+            <input type="checkbox" name="nc"><br><br>
+            <label for="cc">this is a checked checkbox</label>
+            <input type="checkbox" name="cc" checked><br><br>
+            <label for="color">this is a color input</label>
+            <input type="color" name="color"><br><br>
+            <label for="date">this is a date input</label>
+            <input type="date" name="date"><br><br>
+            <label for="datetime-local">this is a datetime-local input</label>
+            <input type="datetime-local" name="datetime-local" value=""><br><br>
+            <label for="email">this is an email input</label>
+            <input type="email" name="email"><br><br>
+            <label for="file">this is a file input</label>
+            <input type="file" name="file"><br><br>
+            <label for="ifile">this is a file input that only accept images</label>
+            <input type="file" name="ifile" accept="image/*"><br><br>
+            <label for="hidden">this is a hidden input</label>
+            <input type="hidden" name="hidden"><br><br>
+            <label for="image">this is a submit input as an image</label>
+            <input type="image" name="image" src="logo.png" width="40px" height="40px"><br><br>
+            <label for="month">this is a month input</label>
+            <input type="month" name="month"><br><br>
+            <label for="number">this is a number input</label>
+            <input type="number" name="number" step="0.5"><br><br>
+            <label for="password">this is a password input</label>
+            <input type="password" name="password"><br><br>
+            <label for="radio">this is a radio input</label>
+            <input type="radio" name="radio"><br><br>
+            <label for="range">this is a range input</label>
+            <input type="range" name="range"><br><br>
+            <label for="reset">this is a reset input</label>
+            <input type="reset" name="reset"><br><br>
+            <label for="search">this is a search input</label>
+            <input type="search" name="search"><br><br>
+            <label for="submit">this is a submit input</label>
+            <input type="submit" name="submit"><br><br>
+            <label for="tel">this is a mobile number input</label>
+            <input type="tel" name="tel"><br><br>
+            <label for="text">this is a text input (default)</label>
+            <input type="text" name="text"><br><br>
+            <label for="time">this is a time input</label>
+            <input type="time" name="time"><br><br>
+            <label for="url">this is a url input</label>
+            <input type="url" name="url"><br><br>
+            <label for="week">this is a week input</label>
+            <input type="week" name="week"><br><br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="this is a textarea"></textarea><br><br>
+            <label for="select">this is a select</label>
+            <select name="select" id="select">
+                <optgroup label="This is an option group">
+                    <option value="">this is an option</option>
+                    <option value="">this is an option</option>
+                    <option value="">this is an option</option>
+                </optgroup>
+                <optgroup label="This is an option group">
+                    <option value="">this is an option</option>
+                    <option value="">this is an option</option>
+                    <option value="">this is an option</option>
+                </optgroup>
+            </select><br><br>
+            <h2>____________<sub>&lt;fieldset&gt;</sub>____________</h2>
+            <fieldset>
+                <legend>This is a legend</legend>
+                <input type="text" placeholder="This is an input">
+                <button type="menu">Button</button>
+            </fieldset><br><br>
+            <input list="datalist" type="text" placeholder="this is a datalist"> <p>(unsupported in very old versions of browsers)</p>
+            <datalist id="datalist">
+                <option value="this is an option">
+                <option value="this is an option">
+                <option value="this is an option">
+                <option value="this is an option">
+                <option value="this is an option">
+                </datalist>
+            <input type="range" id="a" value="100">
+            <input type="range" id="b" value="50">
+            <output name="x" for="a b">This is an output (unsupported in very old versions of browsers)</output>
+        </form><br><br>
+        
+        <hr><h1>&lt;iframe&gt; tag</h1>
+        <iframe src="css.html" title="Youtube"></iframe>
+        
+        <hr><h1>&lt;figure&gt;, &lt;figcaption&gt; and &lt;img&gt; tags</h1>
+        <figure>
+            <img src="logo.png" alt="logo">
+            <figcaption>This is a figcaption</figcaption>
+        </figure>
+
+        <hr><h1>&lt;picture&gt; tag</h1>
+        <picture>
+            <source media="(min-width:650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+            <source media="(min-width:465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+            <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+        </picture>
+
+        <hr><h1>&lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; tags</h1>
+        <dl>
+            <dt>dt</dt>
+            <dd>this is dd</dd>
+            <dt>dt</dt>
+            <dd>this is dd</dd>
+            <dt>dt</dt>
+            <dd>this is dd</dd>
+            <dt>dt</dt>
+            <dd>this is dd</dd>
+        </dl>
+
+        <hr><h1>table tags</h1>
+        <table>
+            <caption>This is a caption</caption>
+            <thead>
+                <tr>
+                    <th>th</th>
+                    <th>in</th>
+                    <th>tr</th>
+                    <th>in</th>
+                    <th>thead</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>td</td>
+                    <td>in</td>
+                    <td>tr</td>
+                    <td>in</td>
+                    <td>tbody</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>td</td>
+                    <td>in</td>
+                    <td>tr</td>
+                    <td>in</td>
+                    <td>tfoot</td>
+                </tr>
+            </tfoot>
+            <colgroup>
+                <col style="background-color: #f00;">
+                <col style="background-color: #0f0;">
+                <col style="background-color: #0ff;">
+                <col style="background-color: #ff0;">
+                <col style="background-color: #f0f;">
+            </colgroup>
+        </table>
+
+        <hr><h1>&lt;details&gt; and &lt;summary&gt; tags</h1>
+        <details>
+            <summary>this is a summary</summary>
+            <p>this is a paragraph</p>
+        </details>
+        <br><hr><hr><hr><br>
+    </div>
+    
+    <h1>Attributes</h1>
+    <hr><h2>contenteditable</h2>
+    <p contenteditable="true">this is an editable paragraph</p>
+    
+    <hr><h2>dir</h2>
+    <p dir="rtl">this is a rtl paragraph</p>
+
+    <hr><h2>draggable</h2>
+    <p draggable="true">this is a draggable paragraph</p>
+
+    <hr><h2>inert</h2>
+    <p inert>You can not edit, copy or click on this text</p>
+
+    <hr><h2>tabindex</h2>
+    <p tabindex="2">tabindex 2</p>
+    <p tabindex="3">tabindex 3</pt>
+    <p tabindex="1">tabindex 1</pt>
+
+    <hr><h2>title</h2>
+    <p title="This is the title attribute">hover this element for 2 seconds</p>
+    <hr>
+    <textarea name="code" id="codearea" cols="30" rows="30" style="display: inline-block;"></textarea>
+    <div class="output" style="width: 100%; min-height: 100%; display: inline-block;"></div>
+    <script src="script.js"></script>
+</body>
+</html>

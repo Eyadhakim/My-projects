@@ -1,0 +1,84 @@
+@use "./layout/global";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@for $l from 1 through 30 {
+    .class-#{$l} {
+        font-size: 10px + $l;
+    }
+}
+
+//global variable
+$green: #32b255;
+$theme: "light";
+
+h1 {
+    background-color: $green;
+}
+
+h2 {
+    //local variable
+    $green: #082302;
+    background-color: $green;
+}
+
+h3 {
+    background-color: $green;
+    
+    //global variable
+    $mobile: "max-width: 767px" !global;
+}
+
+%main-class {
+    margin: auto;
+    padding: auto;
+}
+
+.grand-parent {
+    width: 100px;
+    
+    .parent {
+        width: 50px;
+        .child {
+            width: 25px;
+        }
+    }
+    
+    &:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    border: {
+        radius: 5px;
+        color: red;
+        width: 3px;
+        style: solid;
+    }
+
+    @extend %main-class;
+}
+
+@media ($mobile) {
+    h3 {
+        background-color: #000;
+    }
+
+    .parent {
+        @if $theme == "light" {
+            background-color: #fff;
+            color: #444;
+        } @else {
+            background-color: #444;
+            color: #fff;
+        }
+        border-color: if($theme == "light", #000, #fff);
+    }
+}

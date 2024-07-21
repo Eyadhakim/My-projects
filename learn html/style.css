@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #04FF05;
+    --mainWidth: 30vw;
+}
+
+.text {
+    background-color: #DDD;
+    font-size: 3vw;
+    height: 3em;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #F00;
+    text-decoration: underline;
+    text-transform: none;
+    line-height: 1.6;
+}
+
+.paragraph {
+    text-indent: 100px;
+    width: var(--mainWidth);
+    margin: auto;
+    min-height: 3em;
+    background-color: #EEE;
+    border: 2px solid var(--mainColor);
+    font-size: 2em;
+    margin-top: 20px;
+    padding: 20px;
+    line-height: 1.6;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+    border: 2px solid green;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 3em;
+    box-shadow: 15px 15px 15px;
+}
+
+div p {
+    border: inherit;
+    width: 50%;
+    margin: auto;
+}
+
+.par {
+    width: 50%;
+    margin: auto;
+}
+
+.par::first-letter {
+    background-color: rgb(92, 255, 198);
+    font-size: 3em;
+}
+
+.par::first-line {
+    color: rgb(255, 17, 17);
+    font-weight: bold;
+}
+
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+
+ul {
+    counter-increment: sisi;
+    list-style: none;
+}
+
+#list::before {
+    content: counter(sisi);
+}
+
+li::before {
+    content: counter(sisi);
+}
+
+.flex {
+    background-color: #DDD;
+    box-shadow: none;
+    padding: 0;
+    border: 8px solid #999;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox {
+    box-shadow: none;
+    margin: 0;
+    background-image: linear-gradient(to right, #FFAB00 20%, #03FF42 40%, #01D9FF 60%, #1106FF 80%);
+    text-align: center;
+    font-size: 2em;
+    padding: 30px 0;
+    min-height: 70px;
+    flex-grow: 1;
+}
+
+img {
+    filter: grayscale(100%);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+img:hover {
+    transform: rotate(45deg) translate(200px) scale(1.5);
+    -webkit-transform: rotate(45deg) translate(200px) scale(1.5);
+    -moz-transform: rotate(45deg) translate(200px) scale(1.5);
+    -ms-transform: rotate(45deg) translate(200px) scale(1.5);
+    -o-transform: rotate(45deg) translate(200px) scale(1.5);
+}
+
+.transform {
+    width: 20vw;
+    height: 20vw;
+    box-shadow: none;
+    background-color: #80008066;
+    text-transform: capitalize;
+    font-size: 2.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+#skew {
+    background-color: #fff0;
+    border: none;
+}
+
+#skew::before {
+    content: "";
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    box-shadow: none;
+    background-color: #80008066;
+    text-transform: capitalize;
+    font-size: 2.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    border: 3px solid green;
+    transform: skew(45deg);
+    -webkit-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -o-transform: skew(45deg);
+}
+
+#matrix {
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+
+#matrix:hover {
+    transform: matrix(1.5, 0, 0, 1.5, 200, 5);
+    -webkit-transform: matrix(1.5, 0, 0, 1.5, 200, 5);
+    -moz-transform: matrix(1.5, 0, 0, 1.5, 200, 5);
+    -ms-transform: matrix(1.5, 0, 0, 1.5, 200, 5);
+    -o-transform: matrix(1.5, 0, 0, 1.5, 200, 5);
+    /*(scaleX, skewY, skewX, scaleY, translateX, translateY)*/
+}
+
+.container {
+    margin: 200px auto;
+    width: 200px;
+    perspective: 600px;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.box:hover {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+
+.box .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.box .front {
+    background-color: red;
+}
+
+.box .back {
+    background-color: green;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.load {
+    width: 100px;
+    height: 100px;
+    background-color: #EEE;
+    border: 5px solid red;
+    margin: 400px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-left-color: transparent;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    } 
+    
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    } 
+}
+
+.loading {
+    margin: 400px auto;
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.loading div {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: updownload 1s linear infinite;
+    -webkit-animation: updownload 1s linear infinite alternate;
+}
+
+.loading div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loading div:last-child {
+    animation-delay: 0.6s;
+}
+
+@keyframes updownload {
+    to {
+        opacity: 0.2;
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+    }
+}
+
+span {
+    display: block;
+    height: 30px;
+    width: 60px;
+    background-color: #FF0;
+    margin: 50px;
+    position: absolute;
+    top: 0;
+}
+
+span + p {
+    display: none;
+}
+
+span:hover + p {
+    display: block;
+}
